@@ -1,1 +1,9 @@
-print("Hello DevOps World")
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello DevOps World 🚀"
+
+app.run(host="0.0.0.0", port=80)
